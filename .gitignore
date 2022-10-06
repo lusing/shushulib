@@ -1,2 +1,5 @@
 .idea/
 .vs/
+build/
+out/
+x64/
