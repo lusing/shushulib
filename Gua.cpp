@@ -1,12 +1,12 @@
 #include "Gua.h"
 
-#include <boost/make_shared.hpp>
+#include <memory>
 
-using boost::make_shared;
+using std::make_shared;
 
-boost::shared_ptr<string> BaGua::getGuaName(int gua)
+std::shared_ptr<string> BaGua::getGuaName(int gua)
 {
-	return boost::make_shared<string>(GuaName[(gua-1)%9]);
+	return std::make_shared<string>(GuaName[(gua-1)%9]);
 }
 
 int BaGua::getPos(int gua)

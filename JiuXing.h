@@ -24,8 +24,8 @@ const int JiuXingWuXing [9] = {SHUI, JIN, JIN, TU,HUO,MU,MU,TU,TU};
 class JiuXing
 {
 public:
-	static boost::shared_ptr<std::string> getXingName(int jiu_xing);
-	static boost::shared_ptr<std::string> getXingAnotherName(int jiu_xing);
+	static std::shared_ptr<std::string> getXingName(int jiu_xing);
+	static std::shared_ptr<std::string> getXingAnotherName(int jiu_xing);
 	static int getWuXing(int jiu_xing);
 	//获得九星在八卦配合时的原位
 	static int getStaticGua(int jiu_xing); 

@@ -36,13 +36,13 @@ public:
 
 	int getMonth(void);
 
-	bool he(boost::shared_ptr<DiZhi> pz);
-	bool chong(boost::shared_ptr<DiZhi> pz);
-	bool sanhe(boost::shared_ptr<DiZhi> pz2, boost::shared_ptr<DiZhi> pz3);
+	bool he(std::shared_ptr<DiZhi> pz);
+	bool chong(std::shared_ptr<DiZhi> pz);
+	bool sanhe(std::shared_ptr<DiZhi> pz2, std::shared_ptr<DiZhi> pz3);
 
 	virtual int getXing() = 0;
 
-	boost::shared_ptr<std::vector<int> > getJiGongTianGanList();
+	std::shared_ptr<std::vector<int> > getJiGongTianGanList();
 
 protected:
 	int dzid;

@@ -31,9 +31,9 @@ public:
 	int getTgid(void);
 	int getJiGong();
 	int getHe();
-	static inline boost::shared_ptr<std::string> getQiYiName(int tg)
+	static inline std::shared_ptr<std::string> getQiYiName(int tg)
 	{
-		return boost::make_shared<std::string>(qiYiName[tg%10]);
+		return std::make_shared<std::string>(qiYiName[tg%10]);
 	}
 
 protected:

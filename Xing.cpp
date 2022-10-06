@@ -10,7 +10,7 @@
 
 #include "defaultFlags.h"
 
-using boost::make_shared;
+using std::make_shared;
 
 Xing::Xing(void)
 : feature(0)
@@ -21,7 +21,7 @@ Xing::~Xing(void)
 {
 }
 
-bool Xing::ke(boost::shared_ptr<Xing> xing)
+bool Xing::ke(std::shared_ptr<Xing> xing)
 {
 	if (ke(this->feature,xing->feature)){
 #ifdef ANDROID_LIB
@@ -44,7 +44,7 @@ bool Xing::ke(int ker, int kee)
 	return ((ker + 2)%5 == kee);
 }
 
-bool Xing::sheng(boost::shared_ptr<Xing> xing)
+bool Xing::sheng(std::shared_ptr<Xing> xing)
 {
 	if (sheng(this->feature,xing->feature)){
 #ifdef ANDROID_LIB
@@ -57,7 +57,7 @@ bool Xing::sheng(boost::shared_ptr<Xing> xing)
 	else return false;
 }
 
-int Xing::whichWang(boost::shared_ptr<Xing>* pXings, int numbers)
+int Xing::whichWang(std::shared_ptr<Xing>* pXings, int numbers)
 {
 	int index = -1;
 
@@ -182,18 +182,18 @@ int Xing::whichWang(boost::shared_ptr<Xing>* pXings, int numbers)
 	return index;
 }
 
-boost::shared_ptr<Xing> Xing::whichXingIsWang(boost::shared_ptr<Xing>* pXing,int numbers)
+std::shared_ptr<Xing> Xing::whichXingIsWang(std::shared_ptr<Xing>* pXing,int numbers)
 {
 	int index = whichWang(pXing,numbers);
 	if(index == numbers)
-		return boost::shared_ptr<Xing>();
+		return std::shared_ptr<Xing>();
 	else
 		return pXing[index];
 }
 
-int Xing::getState(boost::shared_ptr<Xing> pXing, boost::shared_ptr<Xing>* pXings, int numbers)
+int Xing::getState(std::shared_ptr<Xing> pXing, std::shared_ptr<Xing>* pXings, int numbers)
 {
-	boost::shared_ptr<Xing> pWang = whichXingIsWang(pXings,numbers);
+	std::shared_ptr<Xing> pWang = whichXingIsWang(pXings,numbers);
 
 	if(pWang == NULL)
 		return ZHEFU;
@@ -222,29 +222,29 @@ int Xing::getState(boost::shared_ptr<Xing> pXing, boost::shared_ptr<Xing>* pXing
 		return ZHEFU;
 }
 
-boost::shared_ptr<Xing> Xing::buildXing(int xing)
+std::shared_ptr<Xing> Xing::buildXing(int xing)
 {
 	int xing2 = (xing+5) % 5;
 
 	switch (xing2)
 	{
 	case HUO:
-		return boost::make_shared<Huo>();
+		return std::make_shared<Huo>();
 		break;
 	case JIN:
-		return boost::make_shared<Jin>();
+		return std::make_shared<Jin>();
 		break;
 	case MU:
-		return boost::make_shared<Mu>();
+		return std::make_shared<Mu>();
 		break;
 	case SHUI:
-		return boost::make_shared<Shui>();
+		return std::make_shared<Shui>();
 		break;
 	case TU:
-		return boost::make_shared<Tu>();
+		return std::make_shared<Tu>();
 		break;
 	default:
-		return boost::shared_ptr<Xing>();
+		return std::shared_ptr<Xing>();
 		break;
 	}
 }

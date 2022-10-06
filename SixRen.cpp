@@ -24,17 +24,17 @@
 
 using namespace std;
 
-using boost::make_shared;
+using std::make_shared;
 
 int main(int argc, char* argv[])
 {
-	boost::shared_ptr<Xing> xings[5];
+	std::shared_ptr<Xing> xings[5];
 
-	xings[0] = boost::make_shared<Jin>();
-	xings[1] = boost::make_shared<Mu>();
-	xings[2] = boost::make_shared<Shui>();
-	xings[3] = boost::make_shared<Tu>();
-	xings[4] = boost::make_shared<Huo>();
+	xings[0] = std::make_shared<Jin>();
+	xings[1] = std::make_shared<Mu>();
+	xings[2] = std::make_shared<Shui>();
+	xings[3] = std::make_shared<Tu>();
+	xings[4] = std::make_shared<Huo>();
 
 	for(int i=0;i<5;i++){
 		for (int j=0;j<5;j++){
@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
 		}
 	}
 
-	boost::shared_ptr<DiZhi> dzs[12];
+	std::shared_ptr<DiZhi> dzs[12];
 
 	for(int i=0;i<12;i++)
 	{
@@ -104,7 +104,7 @@ int main(int argc, char* argv[])
 	plr6->sanChuan();
 	plr6->duanKe();
 
-	boost::shared_ptr<LiuRen> plr7(new LiuRen(4, DZxu, TGgeng, DZzi));
+	std::shared_ptr<LiuRen> plr7(new LiuRen(4, DZxu, TGgeng, DZzi));
 	plr7->diPan();
 	plr7->tianPan();
 	plr7->siKe();
@@ -112,7 +112,7 @@ int main(int argc, char* argv[])
 	plr7->duanKe();
 
 	//¼û»ú¸ñ
-	boost::shared_ptr<LiuRen> plr8(new LiuRen(DZshen+1,DZyou,TGji,DZhai));
+	std::shared_ptr<LiuRen> plr8(new LiuRen(DZshen+1,DZyou,TGji,DZhai));
 	plr8->diPan();
 	plr8->tianPan();
 	plr8->siKe();
@@ -120,20 +120,20 @@ int main(int argc, char* argv[])
 	plr8->duanKe();
 
 	//°ºÐÇ·¨ Ñô
-	boost::shared_ptr<LiuRen> plr9 = boost::make_shared<LiuRen>(
+	std::shared_ptr<LiuRen> plr9 = std::make_shared<LiuRen>(
 		Month::getMonthByYueJiang(DZwu),DZyin,TGwu,DZyin);
 	plr9->doAll();
 
-	boost::shared_ptr<LiuRen> plr10 = boost::make_shared<LiuRen>(
+	std::shared_ptr<LiuRen> plr10 = std::make_shared<LiuRen>(
 		Month::getMonthByYueJiang(DZhai),DZzi,TGyi,DZwei);
 	plr10->doAll();
 
 	//Ñî´ºÒå½²×ùÉæº¦·¨Àý
-	boost::shared_ptr<LiuRen> plr_ycy1 = boost::make_shared<LiuRen>(
+	std::shared_ptr<LiuRen> plr_ycy1 = std::make_shared<LiuRen>(
 		Month::getMonthByYueJiang(DZhai),DZmao,TGjia,DZchen);
 	plr_ycy1->doAll();
 
-	boost::shared_ptr<LiuRen> plr_ycy2 = boost::make_shared<LiuRen>(
+	std::shared_ptr<LiuRen> plr_ycy2 = std::make_shared<LiuRen>(
 		6,DZhai,TGbing,DZzi);
 	plr_ycy2->doAll();
 
@@ -192,10 +192,10 @@ int main(int argc, char* argv[])
 	//index = Xing::whichWang(pXings13,4);
 	//cout<<"The wang index is "<<index<<endl;
 
-	boost::shared_ptr<JinKouJue> pJKJ = boost::make_shared<JinKouJue>(boost::make_shared<Gan_Zhi>(TGwu, DZyin),
-		boost::make_shared<Gan_Zhi>(TGren, DZxu),
-		boost::make_shared<Gan_Zhi>(TGgeng, DZyin),
-		boost::make_shared<Gan_Zhi>(TGren, DZwu),
+	std::shared_ptr<JinKouJue> pJKJ = std::make_shared<JinKouJue>(std::make_shared<Gan_Zhi>(TGwu, DZyin),
+		std::make_shared<Gan_Zhi>(TGren, DZxu),
+		std::make_shared<Gan_Zhi>(TGgeng, DZyin),
+		std::make_shared<Gan_Zhi>(TGren, DZwu),
 		Month::buildZhi(DZshen));
 
 #if 0
@@ -279,13 +279,13 @@ int main(int argc, char* argv[])
 
 	cout<<"...¾­µäÀý..."<<endl;
 
-	QiMenDunJia* pQM3 = new QiMenDunJia(JQYuShui,ShangYuan,boost::make_shared<Gan_Zhi>(TGxin, DZsi),boost::make_shared<Gan_Zhi>(TGgeng,DZxu));
+	QiMenDunJia* pQM3 = new QiMenDunJia(JQYuShui,ShangYuan,std::make_shared<Gan_Zhi>(TGxin, DZsi),std::make_shared<Gan_Zhi>(TGgeng,DZxu));
 	//QiMenDunJia::printDiPan();
 	pQM3->printDunJu();
 
 	cout<<"Òõ¶Ý"<<endl;
 
-	QiMenDunJia* pQM4 = new QiMenDunJia(JQDaXue,ShangYuan,boost::make_shared<Gan_Zhi>(TGwu, DZyin),boost::make_shared<Gan_Zhi>(TGgeng,DZxu));
+	QiMenDunJia* pQM4 = new QiMenDunJia(JQDaXue,ShangYuan,std::make_shared<Gan_Zhi>(TGwu, DZyin),std::make_shared<Gan_Zhi>(TGgeng,DZxu));
 	//QiMenDunJia::printDiPan();
 	pQM4->printDunJu();
 

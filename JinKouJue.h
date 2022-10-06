@@ -7,24 +7,24 @@
 class JinKouJue
 {
 public:
-	JinKouJue(boost::shared_ptr<Gan_Zhi> pYear,boost::shared_ptr<Gan_Zhi> pMonth,
-		boost::shared_ptr<Gan_Zhi> pDay,boost::shared_ptr<Gan_Zhi> pHour,
-		boost::shared_ptr<DiZhi> pDiFen);
+	JinKouJue(std::shared_ptr<Gan_Zhi> pYear,std::shared_ptr<Gan_Zhi> pMonth,
+		std::shared_ptr<Gan_Zhi> pDay,std::shared_ptr<Gan_Zhi> pHour,
+		std::shared_ptr<DiZhi> pDiFen);
 	~JinKouJue(void);
 
-	boost::shared_ptr<Gan_Zhi> pYear;
-	boost::shared_ptr<Gan_Zhi> pMonth;
-	boost::shared_ptr<Gan_Zhi> pDay;
-	boost::shared_ptr<Gan_Zhi> pHour;
+	std::shared_ptr<Gan_Zhi> pYear;
+	std::shared_ptr<Gan_Zhi> pMonth;
+	std::shared_ptr<Gan_Zhi> pDay;
+	std::shared_ptr<Gan_Zhi> pHour;
 
-	boost::shared_ptr<DiZhi> pDiFen;
+	std::shared_ptr<DiZhi> pDiFen;
 
-	boost::shared_ptr<DiZhi> pYueJiang;
-	boost::shared_ptr<GuiShen> pGuiShen;
-	boost::shared_ptr<TianGan> pRenYuan;
+	std::shared_ptr<DiZhi> pYueJiang;
+	std::shared_ptr<GuiShen> pGuiShen;
+	std::shared_ptr<TianGan> pRenYuan;
 
-	boost::shared_ptr<TianGan> pJiangGan;
-	boost::shared_ptr<TianGan> pShenGan;
+	std::shared_ptr<TianGan> pJiangGan;
+	std::shared_ptr<TianGan> pShenGan;
 
 	bool bYongShenIsJiang;
 
@@ -49,7 +49,7 @@ public:
 
 private:
 	string parseYueJiangName();
-	vector<boost::shared_ptr<TianGan> > gans;
-	vector<boost::shared_ptr<DiZhi> > zhis;
-	vector<boost::shared_ptr<Gan_Zhi> > sizhu;
+	vector<std::shared_ptr<TianGan> > gans;
+	vector<std::shared_ptr<DiZhi> > zhis;
+	vector<std::shared_ptr<Gan_Zhi> > sizhu;
 };

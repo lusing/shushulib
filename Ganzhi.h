@@ -17,8 +17,8 @@ public:
 	virtual ~GanZhi(void);
 
 	virtual int getXing() = 0;
-	bool ke(boost::shared_ptr<GanZhi> pgz);
-	bool sheng(boost::shared_ptr<GanZhi> pgz);
+	bool ke(std::shared_ptr<GanZhi> pgz);
+	bool sheng(std::shared_ptr<GanZhi> pgz);
 	virtual string getName() = 0;
-	boost::shared_ptr<Xing> buildXing();
+	std::shared_ptr<Xing> buildXing();
 };

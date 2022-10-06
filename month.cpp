@@ -3,92 +3,92 @@
 
 #include "GuiShen.h"
 
-using boost::make_shared;
+using std::make_shared;
 
-boost::shared_ptr<DiZhi> Month::buildZhi(int dzid)
+std::shared_ptr<DiZhi> Month::buildZhi(int dzid)
 {
 	dzid = dzid>=0 ? dzid %12: dzid % 12 +12;
-	boost::shared_ptr<DiZhi> pdz;
+	std::shared_ptr<DiZhi> pdz;
 	switch(dzid)
 	{
 	case DZzi:
 		//pdz = new DiZhi_Zi();
-		pdz = boost::make_shared<DiZhi_Zi>();
+		pdz = std::make_shared<DiZhi_Zi>();
 		break;
 	case DZchou:
-		pdz = boost::make_shared<DiZhi_Chou>();
+		pdz = std::make_shared<DiZhi_Chou>();
 		break;
 	case DZyin:
-		pdz = boost::make_shared<DiZhi_Yin>();
+		pdz = std::make_shared<DiZhi_Yin>();
 		break;
 	case DZmao:
-		pdz = boost::make_shared<DiZhi_Mao>();
+		pdz = std::make_shared<DiZhi_Mao>();
 		break;
 	case DZchen:
-		pdz = boost::make_shared<DiZhi_Chen>();
+		pdz = std::make_shared<DiZhi_Chen>();
 		break;
 	case DZsi:
-		pdz = boost::make_shared<DiZhi_Si>();
+		pdz = std::make_shared<DiZhi_Si>();
 		break;
 	case DZwu:
-		pdz = boost::make_shared<DiZhi_Wu>();
+		pdz = std::make_shared<DiZhi_Wu>();
 		break;
 	case DZwei:
-		pdz = boost::make_shared<DiZhi_Wei>();
+		pdz = std::make_shared<DiZhi_Wei>();
 		break;
 	case DZshen:
-		pdz = boost::make_shared<DiZhi_Shen>();
+		pdz = std::make_shared<DiZhi_Shen>();
 		break;
 	case DZyou:
-		pdz = boost::make_shared<DiZhi_You>();
+		pdz = std::make_shared<DiZhi_You>();
 		break;
 	case DZxu:
-		pdz = boost::make_shared<DiZhi_Xu>();
+		pdz = std::make_shared<DiZhi_Xu>();
 		break;
 	case DZhai:
-		pdz = boost::make_shared<DiZhi_Hai>();
+		pdz = std::make_shared<DiZhi_Hai>();
 		break;
 	}
 
 	return pdz;
 }
 
-boost::shared_ptr<TianGan> Month::buildGan(int tgid)
+std::shared_ptr<TianGan> Month::buildGan(int tgid)
 {
 
 	tgid = (tgid + 10) % 10;
-	boost::shared_ptr<TianGan> ptg;
+	std::shared_ptr<TianGan> ptg;
 	switch(tgid)
 	{
 	case TGjia:
-		ptg = boost::make_shared<TianGan_Jia>();
+		ptg = std::make_shared<TianGan_Jia>();
 		break;
 	case TGyi:
-		ptg = boost::make_shared<TianGan_Yi>();
+		ptg = std::make_shared<TianGan_Yi>();
 		break;
 	case TGbing:
-		ptg = boost::make_shared<TianGan_Bing>();
+		ptg = std::make_shared<TianGan_Bing>();
 		break;
 	case TGding:
-		ptg = boost::make_shared<TianGan_Ding>();
+		ptg = std::make_shared<TianGan_Ding>();
 		break;
 	case TGwu:
-		ptg = boost::make_shared<TianGan_Wu>();
+		ptg = std::make_shared<TianGan_Wu>();
 		break;
 	case TGji:
-		ptg = boost::make_shared<TianGan_Ji>();
+		ptg = std::make_shared<TianGan_Ji>();
 		break;
 	case TGgeng:
-		ptg = boost::make_shared<TianGan_Geng>();
+		ptg = std::make_shared<TianGan_Geng>();
 		break;
 	case TGxin:
-		ptg = boost::make_shared<TianGan_Xin>();
+		ptg = std::make_shared<TianGan_Xin>();
 		break;
 	case TGren:
-		ptg = boost::make_shared<TianGan_Ren>();
+		ptg = std::make_shared<TianGan_Ren>();
 		break;
 	case TGgui:
-		ptg = boost::make_shared<TianGan_Gui>();
+		ptg = std::make_shared<TianGan_Gui>();
 		break;
 	}
 
@@ -100,19 +100,19 @@ int Month::getYueJiang(int month)
 	return (12-month);
 }
 
-int Month::getYueJiang(boost::shared_ptr<DiZhi> pDZ)
+int Month::getYueJiang(std::shared_ptr<DiZhi> pDZ)
 {
 	return getYueJiang(pDZ->getMonth());
 }
 
-boost::shared_ptr<TianGan> Month::wuZiYuanDu(boost::shared_ptr<TianGan> pTG, boost::shared_ptr<DiZhi> pDZ)
+std::shared_ptr<TianGan> Month::wuZiYuanDu(std::shared_ptr<TianGan> pTG, std::shared_ptr<DiZhi> pDZ)
 {
 	int iTgID = pTG->getTgid();
 	int iDzID = pDZ->getDzid();
 
 	int iTG2 = (iTgID % 5) * 2;
 
-	boost::shared_ptr<TianGan> pTG2 = buildGan((iTG2+iDzID)%10);
+	std::shared_ptr<TianGan> pTG2 = buildGan((iTG2+iDzID)%10);
 
 	//cout<<"[debug]TianGan = "<<pTG2->getTgid()<<endl;
 
@@ -183,13 +183,13 @@ int Month::getYueJiangByJieQi(int jieqi)
 
 int Month::findDiZhiByGuiShen( int riGan, bool isDay, int guiShen)
 {
-	boost::shared_ptr<GuiShen> pGS;
-	boost::shared_ptr<TianGan> pTG = Month::buildGan(riGan);
+	std::shared_ptr<GuiShen> pGS;
+	std::shared_ptr<TianGan> pTG = Month::buildGan(riGan);
 	
 	for(int i=DZzi;i<DZhai+1;i++)
 	{
-		boost::shared_ptr<DiZhi> pDZ = Month::buildZhi(i);
-		pGS = boost::make_shared<GuiShen>(pTG,isDay,pDZ);
+		std::shared_ptr<DiZhi> pDZ = Month::buildZhi(i);
+		pGS = std::make_shared<GuiShen>(pTG,isDay,pDZ);
 		if(pGS->gsID == guiShen)
 			return i;
 	}

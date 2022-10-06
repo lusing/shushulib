@@ -20,6 +20,6 @@ const char GuaName[9][4] = {"¿²","À¤","Õğ","Ùã","ÖĞ","Ç¬","¶Ò","ôŞ","Àë"};
 class BaGua
 {
 public:
-	static boost::shared_ptr<string> getGuaName(int gua);
+	static std::shared_ptr<string> getGuaName(int gua);
 	static int getPos(int gua);
 };

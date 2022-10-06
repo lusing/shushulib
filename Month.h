@@ -26,7 +26,7 @@
 #include "tiangan_ren.h"
 #include "tiangan_gui.h"
 
-#include <boost/shared_ptr.hpp>
+#include <memory>
 
 const int JQDongZhi   = 0x10; //冬至
 const int JQJingZhe   = 0x11; //惊蛰
@@ -65,12 +65,12 @@ class Month
 public:
 	Month(void);
 	~Month(void);
-	static boost::shared_ptr<TianGan> buildGan(int tgid);
-	static boost::shared_ptr<DiZhi> buildZhi(int dzid);
+	static std::shared_ptr<TianGan> buildGan(int tgid);
+	static std::shared_ptr<DiZhi> buildZhi(int dzid);
 	static int getYueJiang(int month);
-	static int getYueJiang(boost::shared_ptr<DiZhi> pDZ);
+	static int getYueJiang(std::shared_ptr<DiZhi> pDZ);
 	static int getMonthByYueJiang(int yuejiang);
-	static boost::shared_ptr<TianGan> wuZiYuanDu(boost::shared_ptr<TianGan> pTG, boost::shared_ptr<DiZhi> pDZ);
+	static std::shared_ptr<TianGan> wuZiYuanDu(std::shared_ptr<TianGan> pTG, std::shared_ptr<DiZhi> pDZ);
 	static int getYueJiangByJieQi(int jieqi);
 
 	static int findDiZhiByGuiShen(int riGan, bool isDay, int guiShen);//根据贵神来查对应的地支

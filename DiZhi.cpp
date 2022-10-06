@@ -38,7 +38,7 @@ int DiZhi::getDzid()
 	return this->dzid;
 }
 
-bool DiZhi::he(boost::shared_ptr<DiZhi> pz)
+bool DiZhi::he(std::shared_ptr<DiZhi> pz)
 {
 	bool ishe = he(this->getDzid(),pz->getDzid());
 	if(ishe)
@@ -48,7 +48,7 @@ bool DiZhi::he(boost::shared_ptr<DiZhi> pz)
 	return ishe;
 }
 
-bool DiZhi::chong(boost::shared_ptr<DiZhi> pz)
+bool DiZhi::chong(std::shared_ptr<DiZhi> pz)
 {
 	bool ischong = chong(this->getDzid(),pz->getDzid());
 	if(ischong)
@@ -62,7 +62,7 @@ bool DiZhi::chong(boost::shared_ptr<DiZhi> pz)
 	return ischong;
 }
 
-bool DiZhi::sanhe(boost::shared_ptr<DiZhi> pz2, boost::shared_ptr<DiZhi> pz3)
+bool DiZhi::sanhe(std::shared_ptr<DiZhi> pz2, std::shared_ptr<DiZhi> pz3)
 {
 	return sanhe(this->getDzid(), pz2->getDzid(), pz3->getDzid());
 }
@@ -72,9 +72,9 @@ int DiZhi::getMonth(void)
 	return (this->dzid -1 ) %12;
 }
 
-boost::shared_ptr<std::vector<int> > DiZhi::getJiGongTianGanList()
+std::shared_ptr<std::vector<int> > DiZhi::getJiGongTianGanList()
 {
-	boost::shared_ptr<std::vector<int> > tgs = boost::make_shared<std::vector<int> >();
+	std::shared_ptr<std::vector<int> > tgs = std::make_shared<std::vector<int> >();
 	switch(dzid)
 	{
 	case DZyin:

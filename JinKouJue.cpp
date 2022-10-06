@@ -15,8 +15,8 @@
 
 using namespace std;
 
-JinKouJue::JinKouJue(boost::shared_ptr<Gan_Zhi> pYear,boost::shared_ptr<Gan_Zhi> pMonth,
-	boost::shared_ptr<Gan_Zhi> pDay,boost::shared_ptr<Gan_Zhi> pHour,boost::shared_ptr<DiZhi> pDiFen)
+JinKouJue::JinKouJue(std::shared_ptr<Gan_Zhi> pYear,std::shared_ptr<Gan_Zhi> pMonth,
+	std::shared_ptr<Gan_Zhi> pDay,std::shared_ptr<Gan_Zhi> pHour,std::shared_ptr<DiZhi> pDiFen)
 {
 	this->pYear = pYear;
 	this->pMonth = pMonth;
@@ -30,7 +30,7 @@ JinKouJue::JinKouJue(boost::shared_ptr<Gan_Zhi> pYear,boost::shared_ptr<Gan_Zhi>
 
 	//cout<<"[debug]isDay="<<isDay<<endl;
 
-	this->pGuiShen = boost::make_shared<GuiShen>(pDay->pTG,isDay,pDiFen);
+	this->pGuiShen = std::make_shared<GuiShen>(pDay->pTG,isDay,pDiFen);
 
 	pRenYuan = Month::wuZiYuanDu(pDay->pTG,pDiFen);
 
@@ -139,14 +139,14 @@ void JinKouJue::duanKe()
 		cout<<"以神为用神"<<endl;
 	}
 
-	boost::shared_ptr<Xing> pXings[4];
+	std::shared_ptr<Xing> pXings[4];
 	//人，贵，月，地
 	pXings[0] = pRenYuan->buildXing();
 	pXings[1] = pGuiShen->pXing;
 	pXings[2] = pYueJiang->buildXing();
 	pXings[3] = pDiFen->buildXing();
 
-	boost::shared_ptr<Xing> pYongShenXing = bYongShenIsJiang? pXings[2] : pXings[1];
+	std::shared_ptr<Xing> pYongShenXing = bYongShenIsJiang? pXings[2] : pXings[1];
 
 	int state = Xing::getState(pYongShenXing,pXings,4);
 	switch(state)
@@ -240,7 +240,7 @@ void JinKouJue::shensha()
 		cout<<"人元见丁。丁火主惊恐事，家中不安，疾病忧愁，损伤六畜，神经病人"<<endl;
 	}
 	//3.天盗(课中见子水)
-	BOOST_FOREACH(boost::shared_ptr<DiZhi> pDZ, zhis)
+	BOOST_FOREACH(std::shared_ptr<DiZhi> pDZ, zhis)
 	{
 		if(pDZ->getDzid() ==DZzi)
 		{
@@ -248,7 +248,7 @@ void JinKouJue::shensha()
 		}
 	}
 	//4.天德
-	BOOST_FOREACH(boost::shared_ptr<DiZhi> pDZ, zhis)
+	BOOST_FOREACH(std::shared_ptr<DiZhi> pDZ, zhis)
 	{
 		if(ShenSha::isTianDe(pMonth->pDZ,pDZ))
 		{
@@ -256,7 +256,7 @@ void JinKouJue::shensha()
 		}
 	}
 
-	BOOST_FOREACH(boost::shared_ptr<TianGan> pTG, gans)
+	BOOST_FOREACH(std::shared_ptr<TianGan> pTG, gans)
 	{
 		if(ShenSha::isTianDe(pMonth->pDZ,pTG))
 		{
@@ -265,7 +265,7 @@ void JinKouJue::shensha()
 	}
 
 	//5.月德
-	BOOST_FOREACH(boost::shared_ptr<TianGan> pTG, gans)
+	BOOST_FOREACH(std::shared_ptr<TianGan> pTG, gans)
 	{
 		if(ShenSha::isYueDe(pMonth->pDZ,pTG->getTgid()))
 		{
@@ -273,7 +273,7 @@ void JinKouJue::shensha()
 		}
 	}
 	//6.天德合
-	BOOST_FOREACH(boost::shared_ptr<TianGan> pTG, gans)
+	BOOST_FOREACH(std::shared_ptr<TianGan> pTG, gans)
 	{
 		if(ShenSha::isTianDeHe(pMonth->pDZ,pTG))
 		{
@@ -281,16 +281,16 @@ void JinKouJue::shensha()
 		}
 	}
 	//7.月德合
-	BOOST_FOREACH(boost::shared_ptr<TianGan> pTG, gans)
+	BOOST_FOREACH(std::shared_ptr<TianGan> pTG, gans)
 	{
-		boost::shared_ptr<TianGan> pTGHe = Month::buildGan(pTG->getHe());
+		std::shared_ptr<TianGan> pTGHe = Month::buildGan(pTG->getHe());
 		if (ShenSha::isYueDe(pMonth->pDZ,pTGHe->getTgid()))
 		{
 			cout<<"月德合入课主和眭，万事顺达有吉庆，化解凶煞，减少损失，逢凶化解，得吉助吉，但是吉庆程度不如月德。"<<endl;
 		}
 	}
 	//8.天马
-	BOOST_FOREACH(boost::shared_ptr<DiZhi> pDZ, zhis)
+	BOOST_FOREACH(std::shared_ptr<DiZhi> pDZ, zhis)
 	{
 		if(ShenSha::isTianMa(pMonth->pDZ->getMonth(),pDZ->getDzid()))
 		{
@@ -299,7 +299,7 @@ void JinKouJue::shensha()
 	}
 
 	//9.驿马
-	BOOST_FOREACH(boost::shared_ptr<DiZhi> pDZ, zhis)
+	BOOST_FOREACH(std::shared_ptr<DiZhi> pDZ, zhis)
 	{
 		if(ShenSha::isDuoMa(pDay->pDZ->getDzid(),pDZ->getDzid()))
 		{
@@ -307,7 +307,7 @@ void JinKouJue::shensha()
 		}
 	}
 	//10.劫煞
-	BOOST_FOREACH(boost::shared_ptr<DiZhi> pDZ, zhis)
+	BOOST_FOREACH(std::shared_ptr<DiZhi> pDZ, zhis)
 	{
 		if(ShenSha::isJieSha(pDay->pDZ->getDzid(),pDZ->getDzid()))
 		{
@@ -340,11 +340,11 @@ void JinKouJue::shensha()
 	//34.课中四绝
 	//35.三奇
 	set<int> ganset;
-	BOOST_FOREACH(boost::shared_ptr<TianGan> pTG, gans)
+	BOOST_FOREACH(std::shared_ptr<TianGan> pTG, gans)
 	{
 		ganset.insert(pTG->getTgid());
 	}
-	BOOST_FOREACH(boost::shared_ptr<Gan_Zhi> pGZ, sizhu)
+	BOOST_FOREACH(std::shared_ptr<Gan_Zhi> pGZ, sizhu)
 	{
 		ganset.insert(pGZ->pTG->getTgid());
 	}

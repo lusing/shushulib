@@ -1,8 +1,7 @@
 #pragma once
 
-#include <boost/shared_ptr.hpp>
+#include <memory>
 #include <string>
-#include <boost/make_shared.hpp>
 
 #include "Gua.h"
 
@@ -21,9 +20,9 @@ const int BaMenGua[8] = {BG_Kan,BG_Qian,BG_Dui,BG_Kun,BG_Li,BG_Xun,BG_Zhen,BG_Ge
 class BaMen
 {
 public:
-	static inline boost::shared_ptr<std::string> getBaMenName(int men)
+	static inline std::shared_ptr<std::string> getBaMenName(int men)
 	{
-		return boost::make_shared<std::string>(BaMenName[men%8]);
+		return std::make_shared<std::string>(BaMenName[men%8]);
 	}
 
 	static inline int getBaMenGua(int men)

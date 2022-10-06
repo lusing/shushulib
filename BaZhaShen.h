@@ -20,9 +20,9 @@ const char BaZhaShenName[8][6] = {"Ö±·û","¾ÅÌì","¾ÅµØ","ÖìÈ¸","¹´³Â","ÁùºÏ","Ì«Ò
 class BaZhaShen
 {
 public:
-	static inline boost::shared_ptr<std::string> getShenName(int men)
+	static inline std::shared_ptr<std::string> getShenName(int men)
 	{
-		return boost::make_shared<std::string>(BaZhaShenName[men%8]);
+		return std::make_shared<std::string>(BaZhaShenName[men%8]);
 	}
 
 };

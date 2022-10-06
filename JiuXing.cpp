@@ -2,16 +2,16 @@
 
 #include <boost/make_shared.hpp>
 
-using boost::make_shared;
+using std::make_shared;
 
-boost::shared_ptr<std::string> JiuXing::getXingName(int jiu_xing)
+std::shared_ptr<std::string> JiuXing::getXingName(int jiu_xing)
 {
-	return boost::make_shared<std::string>(JiuXingName[jiu_xing%9]);
+	return std::make_shared<std::string>(JiuXingName[jiu_xing%9]);
 }
 
-boost::shared_ptr<std::string> JiuXing::getXingAnotherName(int jiu_xing)
+std::shared_ptr<std::string> JiuXing::getXingAnotherName(int jiu_xing)
 {
-	return boost::make_shared<std::string>(JiuXingAnotherName[jiu_xing%9]);
+	return std::make_shared<std::string>(JiuXingAnotherName[jiu_xing%9]);
 }
 
 int JiuXing::getStaticGua(int jiu_xing)

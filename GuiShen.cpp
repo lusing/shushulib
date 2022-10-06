@@ -9,11 +9,9 @@
 #include "Huo.h"
 #include "Month.h"
 
-#include <boost/make_shared.hpp>
+#include <memory>
 
-using boost::make_shared;
-
-GuiShen::GuiShen(boost::shared_ptr<TianGan> pTG, bool isDay, boost::shared_ptr<DiZhi> pDiFen)
+GuiShen::GuiShen(std::shared_ptr<TianGan> pTG, bool isDay, std::shared_ptr<DiZhi> pDiFen)
 {
 	int startForward=0;
 	int startReverse=0;
@@ -64,79 +62,79 @@ GuiShen::GuiShen(boost::shared_ptr<TianGan> pTG, bool isDay, boost::shared_ptr<D
 	switch(gsID)
 	{
 	case 0:
-		pName = boost::make_shared<string>("³ó (ÌìÒÒ¹óÉñ ÒõÍÁ)");
-		pYinYang = boost::make_shared<Yin>();
-		pXing = boost::make_shared<Tu>();
+		pName = std::make_shared<string>("³ó (ÌìÒÒ¹óÉñ ÒõÍÁ)");
+		pYinYang = std::make_shared<Yin>();
+		pXing = std::make_shared<Tu>();
 		pDZ = Month::buildZhi(DZchou);
 		break;
 	case 1:
-		pName = boost::make_shared<string>("ËÈ (ÎŸÉß Òõ»ğ)");
+		pName = std::make_shared<string>("ËÈ (ÎŸÉß Òõ»ğ)");
 		pDZ = Month::buildZhi(DZsi);
-		pYinYang = boost::make_shared<Yin>();
-		pXing = boost::make_shared<Huo>();
+		pYinYang = std::make_shared<Yin>();
+		pXing = std::make_shared<Huo>();
 		break;
 	case 2:
-		pName =boost::make_shared<string>("Îç (ÖìÈ¸ Ñô»ğ)");
+		pName =std::make_shared<string>("Îç (ÖìÈ¸ Ñô»ğ)");
 		pDZ = Month::buildZhi(DZwu);
-		pYinYang = boost::make_shared<Yang>();
-		pXing = boost::make_shared<Huo>();
+		pYinYang = std::make_shared<Yang>();
+		pXing = std::make_shared<Huo>();
 		break;
 	case 3:
-		pName =boost::make_shared<string>("Ã® (ÁùºÏ ÒõÄ¾)");
+		pName =std::make_shared<string>("Ã® (ÁùºÏ ÒõÄ¾)");
 		pDZ = Month::buildZhi(DZmao);
-		pYinYang = boost::make_shared<Yin>();
-		pXing = boost::make_shared<Mu>();
+		pYinYang = std::make_shared<Yin>();
+		pXing = std::make_shared<Mu>();
 		break;
 	case 4:
-		pName =boost::make_shared<string>("³½ (¹´³Â ÑôÍÁ)");
+		pName =std::make_shared<string>("³½ (¹´³Â ÑôÍÁ)");
 		pDZ = Month::buildZhi(DZchen);
-		pYinYang = boost::make_shared<Yang>();
-		pXing = boost::make_shared<Tu>();
+		pYinYang = std::make_shared<Yang>();
+		pXing = std::make_shared<Tu>();
 		break;
 	case 5:
-		pName =boost::make_shared<string>("Òú (ÇàÁú ÑôÄ¾)");
+		pName =std::make_shared<string>("Òú (ÇàÁú ÑôÄ¾)");
 		pDZ = Month::buildZhi(DZyin);
-		pYinYang = boost::make_shared<Yang>();
-		pXing = boost::make_shared<Mu>();
+		pYinYang = std::make_shared<Yang>();
+		pXing = std::make_shared<Mu>();
 		break;
 	case 6:
-		pName =boost::make_shared<string>("Ğç (Ìì¿Õ ÑôÍÁ)");
+		pName =std::make_shared<string>("Ğç (Ìì¿Õ ÑôÍÁ)");
 		pDZ = Month::buildZhi(DZxu);
-		pYinYang = boost::make_shared<Yang>();
-		pXing = boost::make_shared<Tu>();
+		pYinYang = std::make_shared<Yang>();
+		pXing = std::make_shared<Tu>();
 		break;
 	case 7:
-		pName =boost::make_shared<string>("Éê (°×»¢ Ñô½ğ)");
+		pName =std::make_shared<string>("Éê (°×»¢ Ñô½ğ)");
 		pDZ = Month::buildZhi(DZshen);
-		pYinYang = boost::make_shared<Yang>();
-		pXing = boost::make_shared<Jin>();
+		pYinYang = std::make_shared<Yang>();
+		pXing = std::make_shared<Jin>();
 		break;
 	case 8:
-		pName =boost::make_shared<string>("Î´ (Ì«³£ ÒõÍÁ)");
+		pName =std::make_shared<string>("Î´ (Ì«³£ ÒõÍÁ)");
 		pDZ = Month::buildZhi(DZwei);
-		pYinYang = boost::make_shared<Yin>();
-		pXing = boost::make_shared<Tu>();
+		pYinYang = std::make_shared<Yin>();
+		pXing = std::make_shared<Tu>();
 		break;
 	case 9:
-		pName =boost::make_shared<string>("×Ó (ĞşÎä ÑôË®)");
+		pName =std::make_shared<string>("×Ó (ĞşÎä ÑôË®)");
 		pDZ = Month::buildZhi(DZzi);
-		pYinYang = boost::make_shared<Yang>();
-		pXing = boost::make_shared<Shui>();
+		pYinYang = std::make_shared<Yang>();
+		pXing = std::make_shared<Shui>();
 		break;
 	case 10:
-		pName =boost::make_shared<string>("ÓÏ (Ì«Òõ Òõ½ğ)");
+		pName =std::make_shared<string>("ÓÏ (Ì«Òõ Òõ½ğ)");
 		pDZ = Month::buildZhi(DZyou);
-		pYinYang = boost::make_shared<Yin>();
-		pXing = boost::make_shared<Jin>();
+		pYinYang = std::make_shared<Yin>();
+		pXing = std::make_shared<Jin>();
 		break;
 	case 11:
-		pName =boost::make_shared<string>("º¥ (ÌìºóÒõË®)");
+		pName =std::make_shared<string>("º¥ (ÌìºóÒõË®)");
 		pDZ = Month::buildZhi(DZhai);
-		pYinYang = boost::make_shared<Yin>();
-		pXing = boost::make_shared<Shui>();
+		pYinYang = std::make_shared<Yin>();
+		pXing = std::make_shared<Shui>();
 		break;
 	default:
-		pName = boost::make_shared<string>("´íÎó£¡");
+		pName = std::make_shared<string>("´íÎó£¡");
 		break;
 	}
 }

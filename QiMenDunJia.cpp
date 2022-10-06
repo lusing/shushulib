@@ -7,7 +7,7 @@
 #include "Tiangan.h"
 #include "GuiShen.h"
 
-QiMenDunJia::QiMenDunJia(int jq, int yuan, boost::shared_ptr<Gan_Zhi> pGZ, boost::shared_ptr<Gan_Zhi> pRiGanZhi)
+QiMenDunJia::QiMenDunJia(int jq, int yuan, std::shared_ptr<Gan_Zhi> pGZ, std::shared_ptr<Gan_Zhi> pRiGanZhi)
 {
 	this->jieqi = jq;
 	int tg = pGZ->getXunShouTianGan();
