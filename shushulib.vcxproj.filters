@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BaMen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaZhaShen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiZhi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiZhi_Chen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiZhi_Chou.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiZhi_Hai.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiZhi_Mao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiZhi_Shen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiZhi_Si.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiZhi_Wei.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiZhi_Wu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiZhi_Xu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiZhi_Yin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiZhi_You.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiZhi_Zi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ganzhi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Gan_Zhi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Gua.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiShen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Huo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Jin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="JinKouJue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="JiuXing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LiuRen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="month.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QiMenDunJia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QiYi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShenSha.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SixRen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tiangan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TianGan_Bing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TianGan_Ding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TianGan_Geng.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TianGan_Gui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TianGan_Ji.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TianGan_Jia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TianGan_Ren.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TianGan_Wu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TianGan_Xin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TianGan_Yi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TianPan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Xing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Yang.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Yin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="YinYang.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaMen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaZhaShen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="defaultFlags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiZhi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiZhi_Chen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiZhi_Chou.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiZhi_Hai.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiZhi_Mao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiZhi_Shen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiZhi_Si.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiZhi_Wei.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiZhi_Wu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiZhi_Xu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiZhi_Yin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiZhi_You.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiZhi_Zi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ganzhi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gan_Zhi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gua.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiShen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Huo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Jin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JinKouJue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JiuXing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LiuRen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Month.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QiMenDunJia.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QiYi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShenSha.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tiangan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TianGan_Bing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TianGan_Ding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TianGan_Geng.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TianGan_Gui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TianGan_Ji.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TianGan_Jia.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TianGan_Ren.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TianGan_Wu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TianGan_Xin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TianGan_Yi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TianPan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Xing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Yang.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Yin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="YinYang.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

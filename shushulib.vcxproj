@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{58E2B6D6-4475-4C7D-B14D-A7C07EE6B26B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);D:\lang\boost_1_80_0</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <VcpkgInstalledDir>..\..\github\vcpkg</VcpkgInstalledDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BaMen.cpp" />
+    <ClCompile Include="BaZhaShen.cpp" />
+    <ClCompile Include="DiZhi.cpp" />
+    <ClCompile Include="DiZhi_Chen.cpp" />
+    <ClCompile Include="DiZhi_Chou.cpp" />
+    <ClCompile Include="DiZhi_Hai.cpp" />
+    <ClCompile Include="DiZhi_Mao.cpp" />
+    <ClCompile Include="DiZhi_Shen.cpp" />
+    <ClCompile Include="DiZhi_Si.cpp" />
+    <ClCompile Include="DiZhi_Wei.cpp" />
+    <ClCompile Include="DiZhi_Wu.cpp" />
+    <ClCompile Include="DiZhi_Xu.cpp" />
+    <ClCompile Include="DiZhi_Yin.cpp" />
+    <ClCompile Include="DiZhi_You.cpp" />
+    <ClCompile Include="DiZhi_Zi.cpp" />
+    <ClCompile Include="Ganzhi.cpp" />
+    <ClCompile Include="Gan_Zhi.cpp" />
+    <ClCompile Include="Gua.cpp" />
+    <ClCompile Include="GuiShen.cpp" />
+    <ClCompile Include="Huo.cpp" />
+    <ClCompile Include="Jin.cpp" />
+    <ClCompile Include="JinKouJue.cpp" />
+    <ClCompile Include="JiuXing.cpp" />
+    <ClCompile Include="LiuRen.cpp" />
+    <ClCompile Include="month.cpp" />
+    <ClCompile Include="Mu.cpp" />
+    <ClCompile Include="QiMenDunJia.cpp" />
+    <ClCompile Include="QiYi.cpp" />
+    <ClCompile Include="ShenSha.cpp" />
+    <ClCompile Include="Shui.cpp" />
+    <ClCompile Include="SixRen.cpp" />
+    <ClCompile Include="Tiangan.cpp" />
+    <ClCompile Include="TianGan_Bing.cpp" />
+    <ClCompile Include="TianGan_Ding.cpp" />
+    <ClCompile Include="TianGan_Geng.cpp" />
+    <ClCompile Include="TianGan_Gui.cpp" />
+    <ClCompile Include="TianGan_Ji.cpp" />
+    <ClCompile Include="TianGan_Jia.cpp" />
+    <ClCompile Include="TianGan_Ren.cpp" />
+    <ClCompile Include="TianGan_Wu.cpp" />
+    <ClCompile Include="TianGan_Xin.cpp" />
+    <ClCompile Include="TianGan_Yi.cpp" />
+    <ClCompile Include="TianPan.cpp" />
+    <ClCompile Include="Tu.cpp" />
+    <ClCompile Include="Xing.cpp" />
+    <ClCompile Include="Yang.cpp" />
+    <ClCompile Include="Yin.cpp" />
+    <ClCompile Include="YinYang.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaMen.h" />
+    <ClInclude Include="BaZhaShen.h" />
+    <ClInclude Include="defaultFlags.h" />
+    <ClInclude Include="DiZhi.h" />
+    <ClInclude Include="DiZhi_Chen.h" />
+    <ClInclude Include="DiZhi_Chou.h" />
+    <ClInclude Include="DiZhi_Hai.h" />
+    <ClInclude Include="DiZhi_Mao.h" />
+    <ClInclude Include="DiZhi_Shen.h" />
+    <ClInclude Include="DiZhi_Si.h" />
+    <ClInclude Include="DiZhi_Wei.h" />
+    <ClInclude Include="DiZhi_Wu.h" />
+    <ClInclude Include="DiZhi_Xu.h" />
+    <ClInclude Include="DiZhi_Yin.h" />
+    <ClInclude Include="DiZhi_You.h" />
+    <ClInclude Include="DiZhi_Zi.h" />
+    <ClInclude Include="Ganzhi.h" />
+    <ClInclude Include="Gan_Zhi.h" />
+    <ClInclude Include="Gua.h" />
+    <ClInclude Include="GuiShen.h" />
+    <ClInclude Include="Huo.h" />
+    <ClInclude Include="Jin.h" />
+    <ClInclude Include="JinKouJue.h" />
+    <ClInclude Include="JiuXing.h" />
+    <ClInclude Include="LiuRen.h" />
+    <ClInclude Include="Month.h" />
+    <ClInclude Include="Mu.h" />
+    <ClInclude Include="QiMenDunJia.h" />
+    <ClInclude Include="QiYi.h" />
+    <ClInclude Include="ShenSha.h" />
+    <ClInclude Include="Shui.h" />
+    <ClInclude Include="Tiangan.h" />
+    <ClInclude Include="TianGan_Bing.h" />
+    <ClInclude Include="TianGan_Ding.h" />
+    <ClInclude Include="TianGan_Geng.h" />
+    <ClInclude Include="TianGan_Gui.h" />
+    <ClInclude Include="TianGan_Ji.h" />
+    <ClInclude Include="TianGan_Jia.h" />
+    <ClInclude Include="TianGan_Ren.h" />
+    <ClInclude Include="TianGan_Wu.h" />
+    <ClInclude Include="TianGan_Xin.h" />
+    <ClInclude Include="TianGan_Yi.h" />
+    <ClInclude Include="TianPan.h" />
+    <ClInclude Include="Tu.h" />
+    <ClInclude Include="Xing.h" />
+    <ClInclude Include="Yang.h" />
+    <ClInclude Include="Yin.h" />
+    <ClInclude Include="YinYang.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
