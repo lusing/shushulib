@@ -11,6 +11,6 @@ Mu::~Mu(void)
 
 string Mu::getFeature()
 {
-	return "ľ";
+	return "木";
 }
 

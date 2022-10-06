@@ -29,9 +29,9 @@ public:
 
 	DiZhi(void);
 	virtual ~DiZhi(void);
-	static bool he(int he1, int he2);//����
-	static bool sanhe(int he1, int he2, int he3);//����
-	static bool chong(int chong1, int chong2);//��
+	static bool he(int he1, int he2);//地支相合
+	static bool sanhe(int he1, int he2, int he3);//三合
+	static bool chong(int chong1, int chong2);//相冲
 	int getDzid(void);
 
 	int getMonth(void);

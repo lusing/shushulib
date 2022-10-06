@@ -196,6 +196,7 @@ int main(int argc, char* argv[])
                                                                   Month::buildZhi(DZshen));
 
 #if 0
+
     JinKouJue* pJKJ2 = new JinKouJue(
 		new Gan_Zhi(TGding, DZhai),
 		new Gan_Zhi(TGgui, DZmao),

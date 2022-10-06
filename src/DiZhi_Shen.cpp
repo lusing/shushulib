@@ -11,7 +11,7 @@ DiZhi_Shen::~DiZhi_Shen(void)
 
 string DiZhi_Shen::getName()
 {
-	return "Éê";
+	return "ç”³";
 }
 
 int DiZhi_Shen::getXing()

@@ -11,5 +11,5 @@ Tu::~Tu(void)
 
 string Tu::getFeature()
 {
-	return "ÍÁ";
+	return "åœŸ";
 }

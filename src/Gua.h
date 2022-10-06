@@ -13,7 +13,7 @@ const int BG_Li    = 9;
 
 const int BG_Zhong = 5;//中五宫，不属于八卦之一
 
-const char GuaName[9][4] = {"坎","坤","震","巽","中","乾","兑","艮","离"};
+const char GuaName[9][10] = {"坎","坤","震","巽","中","乾","兑","艮","离"};
 
 class BaGua
 {

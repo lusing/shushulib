@@ -11,7 +11,7 @@ DiZhi_Mao::~DiZhi_Mao(void)
 
 string DiZhi_Mao::getName()
 {
-	return "î";
+	return "卯";
 }
 
 int DiZhi_Mao::getXing()

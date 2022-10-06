@@ -11,7 +11,7 @@ DiZhi_Si::~DiZhi_Si(void)
 
 string DiZhi_Si::getName()
 {
-	return "À»";
+	return "Â∑≥";
 }
 
 int DiZhi_Si::getXing()

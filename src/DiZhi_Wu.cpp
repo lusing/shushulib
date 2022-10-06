@@ -11,7 +11,7 @@ DiZhi_Wu::~DiZhi_Wu(void)
 
 string DiZhi_Wu::getName()
 {
-	return "ŒÁ";
+	return "Âçà";
 }
 
 int DiZhi_Wu::getXing()

@@ -11,7 +11,7 @@ DiZhi_Chen::~DiZhi_Chen(void)
 
 string DiZhi_Chen::getName()
 {
-	return "³½";
+	return "è¾°";
 }
 
 int DiZhi_Chen::getXing()

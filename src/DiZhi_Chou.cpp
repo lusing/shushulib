@@ -11,7 +11,7 @@ DiZhi_Chou::~DiZhi_Chou(void)
 
 string DiZhi_Chou::getName()
 {
-	return "³ó";
+	return "ä¸‘";
 }
 
 int DiZhi_Chou::getXing()

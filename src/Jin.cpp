@@ -10,5 +10,5 @@ Jin::~Jin(void)
 }
 
 string Jin::getFeature(){
-	return "½ð";
+	return "é‡‘";
 };

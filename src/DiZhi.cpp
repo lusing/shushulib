@@ -41,7 +41,7 @@ bool DiZhi::he(std::shared_ptr<DiZhi> pz)
 	bool ishe = he(this->getDzid(),pz->getDzid());
 	if(ishe)
 	{
-		cout<<this->getName()<<"��"<<pz->getName()<<"��"<<endl;
+		cout<<this->getName()<<"与"<<pz->getName()<<"合"<<endl;
 	}
 	return ishe;
 }
@@ -51,7 +51,7 @@ bool DiZhi::chong(std::shared_ptr<DiZhi> pz)
 	bool ischong = chong(this->getDzid(),pz->getDzid());
 	if(ischong)
 	{
-		cout<<this->getName()<<pz->getName()<<"���"<<endl;
+		cout<<this->getName()<<pz->getName()<<"相冲"<<endl;
 	}
 	/*else
 	{
