@@ -1,3 +1,0 @@
-D:/xulun/shushulib/build/CMakeFiles/shushu.dir
-D:/xulun/shushulib/build/CMakeFiles/ALL_BUILD.dir
-D:/xulun/shushulib/build/CMakeFiles/ZERO_CHECK.dir
