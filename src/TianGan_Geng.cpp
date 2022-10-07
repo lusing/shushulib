@@ -11,7 +11,7 @@ TianGan_Geng::~TianGan_Geng()
 
 string TianGan_Geng::getName()
 {
-	return "��";
+	return "庚";
 }
 
 int TianGan_Geng::getXing()

@@ -11,7 +11,7 @@ TianGan_Jia::~TianGan_Jia()
 
 string TianGan_Jia::getName()
 {
-	return "��";
+	return "甲";
 }
 
 int TianGan_Jia::getXing()
