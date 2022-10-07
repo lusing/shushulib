@@ -11,5 +11,5 @@ Huo::~Huo(void)
 
 string Huo::getFeature()
 {
-	return "»ğ";
+	return "ç«";
 }
