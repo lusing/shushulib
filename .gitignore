@@ -3,3 +3,4 @@
 build/
 out/
 x64/
+cmake-build-debug/

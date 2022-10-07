@@ -11,7 +11,7 @@ DiZhi_Zi::~DiZhi_Zi(void)
 
 string DiZhi_Zi::getName()
 {
-	return "��";
+	return "子";
 }
 
 int DiZhi_Zi::getXing()

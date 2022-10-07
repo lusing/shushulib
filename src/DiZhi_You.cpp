@@ -11,7 +11,7 @@ DiZhi_You::~DiZhi_You(void)
 
 string DiZhi_You::getName()
 {
-	return "ÓÏ";
+	return "é…‰";
 }
 
 int DiZhi_You::getXing()
