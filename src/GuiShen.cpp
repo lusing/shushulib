@@ -13,130 +13,130 @@
 
 GuiShen::GuiShen(std::shared_ptr<TianGan> pTG, bool isDay, std::shared_ptr<DiZhi> pDiFen)
 {
-	int startForward=0;
-	int startReverse=0;
-	bool isForward=true;
+    int startForward=0;
+    int startReverse=0;
+    bool isForward=true;
 
-	//¼×Îì¸ıÅ£Ñò
-	if(pTG->getTgid() == TGjia || pTG->getTgid() == TGwu || pTG->getTgid() == TGgeng)
-	{
-		startForward = DZchou;
-		startReverse = DZwei;
-		isForward = isDay;
-	}
-	//ÒÒÒÑÊóºïÏç
-	else if(pTG->getTgid()==TGyi || pTG->getTgid()==TGji)
-	{
-		startForward = DZzi;
-		startReverse = DZshen;
-		isForward = isDay;
-	}
-	//±û¶¡Öí¼¦Î»
-	else if(pTG->getTgid()==TGbing || pTG->getTgid()==TGding)
-	{
-		startForward = DZhai;
-		startReverse = DZyou;
-		isForward = isDay;
-	}
-	//ÈÉ¹ïÉßÍÃ²Ø
-	else if(pTG->getTgid()==TGren || pTG->getTgid()==TGgui)
-	{
-		startForward = DZsi;
-		startReverse = DZmao;
-		isForward = !isDay;
-	}
-	//ÁùĞÁ·êÂí»¢
-	else if(pTG->getTgid()==TGxin)
-	{
-		startForward = DZwu;
-		startReverse = DZyin;
-		isForward = !isDay;
-	}
-	//´ËÊÇ¹óÈË·½
-	else{
-		cout<<"Error! Ìì¸É´íÎó£¡"<<endl;
-	}
+    //ç”²æˆŠåºšç‰›ç¾Š
+    if(pTG->getTgid() == TGjia || pTG->getTgid() == TGwu || pTG->getTgid() == TGgeng)
+    {
+        startForward = DZchou;
+        startReverse = DZwei;
+        isForward = isDay;
+    }
+        //ä¹™å·²é¼ çŒ´ä¹¡
+    else if(pTG->getTgid()==TGyi || pTG->getTgid()==TGji)
+    {
+        startForward = DZzi;
+        startReverse = DZshen;
+        isForward = isDay;
+    }
+        //ä¸™ä¸çŒªé¸¡ä½
+    else if(pTG->getTgid()==TGbing || pTG->getTgid()==TGding)
+    {
+        startForward = DZhai;
+        startReverse = DZyou;
+        isForward = isDay;
+    }
+        //å£¬ç™¸è›‡å…”è—
+    else if(pTG->getTgid()==TGren || pTG->getTgid()==TGgui)
+    {
+        startForward = DZsi;
+        startReverse = DZmao;
+        isForward = !isDay;
+    }
+        //å…­è¾›é€¢é©¬è™
+    else if(pTG->getTgid()==TGxin)
+    {
+        startForward = DZwu;
+        startReverse = DZyin;
+        isForward = !isDay;
+    }
+        //æ­¤æ˜¯è´µäººæ–¹
+    else{
+        cout<<"Error! å¤©å¹²é”™è¯¯ï¼"<<endl;
+    }
 
-	gsID = isForward ? (pDiFen->getDzid() - startForward + 12) % 12 : (pDiFen->getDzid() + startReverse + 12) % 12;
+    gsID = isForward ? (pDiFen->getDzid() - startForward + 12) % 12 : (pDiFen->getDzid() + startReverse + 12) % 12;
 
-	switch(gsID)
-	{
-	case 0:
-		pName = std::make_shared<string>("³ó (ÌìÒÒ¹óÉñ ÒõÍÁ)");
-		pYinYang = std::make_shared<Yin>();
-		pXing = std::make_shared<Tu>();
-		pDZ = Month::buildZhi(DZchou);
-		break;
-	case 1:
-		pName = std::make_shared<string>("ËÈ (ÎŸÉß Òõ»ğ)");
-		pDZ = Month::buildZhi(DZsi);
-		pYinYang = std::make_shared<Yin>();
-		pXing = std::make_shared<Huo>();
-		break;
-	case 2:
-		pName =std::make_shared<string>("Îç (ÖìÈ¸ Ñô»ğ)");
-		pDZ = Month::buildZhi(DZwu);
-		pYinYang = std::make_shared<Yang>();
-		pXing = std::make_shared<Huo>();
-		break;
-	case 3:
-		pName =std::make_shared<string>("Ã® (ÁùºÏ ÒõÄ¾)");
-		pDZ = Month::buildZhi(DZmao);
-		pYinYang = std::make_shared<Yin>();
-		pXing = std::make_shared<Mu>();
-		break;
-	case 4:
-		pName =std::make_shared<string>("³½ (¹´³Â ÑôÍÁ)");
-		pDZ = Month::buildZhi(DZchen);
-		pYinYang = std::make_shared<Yang>();
-		pXing = std::make_shared<Tu>();
-		break;
-	case 5:
-		pName =std::make_shared<string>("Òú (ÇàÁú ÑôÄ¾)");
-		pDZ = Month::buildZhi(DZyin);
-		pYinYang = std::make_shared<Yang>();
-		pXing = std::make_shared<Mu>();
-		break;
-	case 6:
-		pName =std::make_shared<string>("Ğç (Ìì¿Õ ÑôÍÁ)");
-		pDZ = Month::buildZhi(DZxu);
-		pYinYang = std::make_shared<Yang>();
-		pXing = std::make_shared<Tu>();
-		break;
-	case 7:
-		pName =std::make_shared<string>("Éê (°×»¢ Ñô½ğ)");
-		pDZ = Month::buildZhi(DZshen);
-		pYinYang = std::make_shared<Yang>();
-		pXing = std::make_shared<Jin>();
-		break;
-	case 8:
-		pName =std::make_shared<string>("Î´ (Ì«³£ ÒõÍÁ)");
-		pDZ = Month::buildZhi(DZwei);
-		pYinYang = std::make_shared<Yin>();
-		pXing = std::make_shared<Tu>();
-		break;
-	case 9:
-		pName =std::make_shared<string>("×Ó (ĞşÎä ÑôË®)");
-		pDZ = Month::buildZhi(DZzi);
-		pYinYang = std::make_shared<Yang>();
-		pXing = std::make_shared<Shui>();
-		break;
-	case 10:
-		pName =std::make_shared<string>("ÓÏ (Ì«Òõ Òõ½ğ)");
-		pDZ = Month::buildZhi(DZyou);
-		pYinYang = std::make_shared<Yin>();
-		pXing = std::make_shared<Jin>();
-		break;
-	case 11:
-		pName =std::make_shared<string>("º¥ (ÌìºóÒõË®)");
-		pDZ = Month::buildZhi(DZhai);
-		pYinYang = std::make_shared<Yin>();
-		pXing = std::make_shared<Shui>();
-		break;
-	default:
-		pName = std::make_shared<string>("´íÎó£¡");
-		break;
-	}
+    switch(gsID)
+    {
+        case 0:
+            pName = std::make_shared<string>("ä¸‘ (å¤©ä¹™è´µç¥ é˜´åœŸ)");
+            pYinYang = std::make_shared<Yin>();
+            pXing = std::make_shared<Tu>();
+            pDZ = Month::buildZhi(DZchou);
+            break;
+        case 1:
+            pName = std::make_shared<string>("å·³ (è£è›‡ é˜´ç«)");
+            pDZ = Month::buildZhi(DZsi);
+            pYinYang = std::make_shared<Yin>();
+            pXing = std::make_shared<Huo>();
+            break;
+        case 2:
+            pName =std::make_shared<string>("åˆ (æœ±é›€ é˜³ç«)");
+            pDZ = Month::buildZhi(DZwu);
+            pYinYang = std::make_shared<Yang>();
+            pXing = std::make_shared<Huo>();
+            break;
+        case 3:
+            pName =std::make_shared<string>("å¯ (å…­åˆ é˜´æœ¨)");
+            pDZ = Month::buildZhi(DZmao);
+            pYinYang = std::make_shared<Yin>();
+            pXing = std::make_shared<Mu>();
+            break;
+        case 4:
+            pName =std::make_shared<string>("è¾° (å‹¾é™ˆ é˜³åœŸ)");
+            pDZ = Month::buildZhi(DZchen);
+            pYinYang = std::make_shared<Yang>();
+            pXing = std::make_shared<Tu>();
+            break;
+        case 5:
+            pName =std::make_shared<string>("å¯… (é’é¾™ é˜³æœ¨)");
+            pDZ = Month::buildZhi(DZyin);
+            pYinYang = std::make_shared<Yang>();
+            pXing = std::make_shared<Mu>();
+            break;
+        case 6:
+            pName =std::make_shared<string>("æˆŒ (å¤©ç©º é˜³åœŸ)");
+            pDZ = Month::buildZhi(DZxu);
+            pYinYang = std::make_shared<Yang>();
+            pXing = std::make_shared<Tu>();
+            break;
+        case 7:
+            pName =std::make_shared<string>("ç”³ (ç™½è™ é˜³é‡‘)");
+            pDZ = Month::buildZhi(DZshen);
+            pYinYang = std::make_shared<Yang>();
+            pXing = std::make_shared<Jin>();
+            break;
+        case 8:
+            pName =std::make_shared<string>("æœª (å¤ªå¸¸ é˜´åœŸ)");
+            pDZ = Month::buildZhi(DZwei);
+            pYinYang = std::make_shared<Yin>();
+            pXing = std::make_shared<Tu>();
+            break;
+        case 9:
+            pName =std::make_shared<string>("å­ (ç„æ­¦ é˜³æ°´)");
+            pDZ = Month::buildZhi(DZzi);
+            pYinYang = std::make_shared<Yang>();
+            pXing = std::make_shared<Shui>();
+            break;
+        case 10:
+            pName =std::make_shared<string>("é…‰ (å¤ªé˜´ é˜´é‡‘)");
+            pDZ = Month::buildZhi(DZyou);
+            pYinYang = std::make_shared<Yin>();
+            pXing = std::make_shared<Jin>();
+            break;
+        case 11:
+            pName =std::make_shared<string>("äº¥ (å¤©åé˜´æ°´)");
+            pDZ = Month::buildZhi(DZhai);
+            pYinYang = std::make_shared<Yin>();
+            pXing = std::make_shared<Shui>();
+            break;
+        default:
+            pName = std::make_shared<string>("é”™è¯¯ï¼");
+            break;
+    }
 }
 
 string GuiShen::getName()

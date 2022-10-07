@@ -24,7 +24,7 @@ public:
 	Xing(void);
 	~Xing(void);
 	bool ke(std::shared_ptr<Xing> xing);
-	// »ù±¾ÊôĞÔ£¬ÖµÎª½ğÄ¾Ë®ÍÁ»ğÖ®Ò»
+	// åŸºæœ¬å±æ€§ï¼Œå€¼ä¸ºé‡‘æœ¨æ°´åœŸç«ä¹‹ä¸€
 	int feature;
 	static bool sheng(int shenger, int shengee);
 	static bool ke(int ker, int kee);
@@ -33,7 +33,7 @@ public:
 
 	inline static string transFeature(int feature)
 	{
-		string fname[] = {"Ä¾","»ğ","ÍÁ","½ğ","Ë®",};
+		string fname[] = {"æœ¨","ç«","åœŸ","é‡‘","æ°´"};
 		return fname[feature%5];
 	}
 

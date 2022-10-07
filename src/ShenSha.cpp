@@ -13,96 +13,96 @@ ShenSha::~ShenSha(void)
 
 bool ShenSha::isTianDe(std::shared_ptr<DiZhi> pMonth, std::shared_ptr<TianGan> pTG)
 {
-	switch (pMonth->getDzid())
-	{
-	case DZyin://Õý¶¡¶þÉê¸ý
-		return pTG->getTgid() == TGding;
-		break;
-	//case DZmao://2
-	//	//return pDZ(DZshen);
-	//	break;
-	case DZchen://3
-		return pTG->getTgid() == TGren;
-		break;
-	case DZsi://4
-		return pTG->getTgid() ==TGxin;
-		break;
-	//case DZwu://5
-	//	//return Month::buildZhi(DZhai);
-	//	break;
-	case DZwei://6
-		return pTG->getTgid() == TGjia;
-		break;
-	case DZshen://7
-		return pTG->getTgid() == TGgui;
-		break;
-	//case DZyou://8
-	//	//return Month::buildZhi(DZyin);
-	//	break;
-	case DZxu://9
-		return pTG->getTgid() == TGbing;
-		break;
-	case DZhai://10
-		return pTG->getTgid() == TGyi;
-		break;
-	//case DZzi://×ÓËÈ³ó¸ýÖÐ
-	//	return //Month::buildZhi(DZsi);
-	//	break;
-	case DZchou:
-		return pTG->getTgid() == TGgeng;
-		break;
-	default:
-		return false;
-		break;
-	}
+    switch (pMonth->getDzid())
+    {
+        case DZyin://æ­£ä¸äºŒç”³åºš
+            return pTG->getTgid() == TGding;
+            break;
+            //case DZmao://2
+            //	//return pDZ(DZshen);
+            //	break;
+        case DZchen://3
+            return pTG->getTgid() == TGren;
+            break;
+        case DZsi://4
+            return pTG->getTgid() ==TGxin;
+            break;
+            //case DZwu://5
+            //	//return Month::buildZhi(DZhai);
+            //	break;
+        case DZwei://6
+            return pTG->getTgid() == TGjia;
+            break;
+        case DZshen://7
+            return pTG->getTgid() == TGgui;
+            break;
+            //case DZyou://8
+            //	//return Month::buildZhi(DZyin);
+            //	break;
+        case DZxu://9
+            return pTG->getTgid() == TGbing;
+            break;
+        case DZhai://10
+            return pTG->getTgid() == TGyi;
+            break;
+            //case DZzi://å­å·³ä¸‘åºšä¸­
+            //	return //Month::buildZhi(DZsi);
+            //	break;
+        case DZchou:
+            return pTG->getTgid() == TGgeng;
+            break;
+        default:
+            return false;
+            break;
+    }
 }
 
 bool ShenSha::isTianDe(std::shared_ptr<DiZhi>  pMonth, std::shared_ptr<DiZhi>  pDZ)
 {
-	switch (pMonth->getDzid())
-	{
-	//case DZyin://Õý¶¡¶þÉê¸ý
-	//	return pTG->getTgid() == TianGan::TGding;
-	//	break;
-	case DZmao://2
-		return pDZ->getDzid() == (DZshen);
-		break;
-	//case DZchen://3
-	//	//return pTG->getTgid() == TianGan::TGren;
-	//	break;
-	//case DZsi://4
-	//	//return pTG->getTgid() ==(TianGan::TGxin);
-	//	break;
-	case DZwu://5
-		return pDZ->getDzid() == (DZhai);
-		break;
-	case DZwei://6
-		//return pTG->getTgid() == (TianGan::TGjia);
-		break;
-	//case DZshen://7
-	//	//return pTG->getTgid() == (TianGan::TGgui);
-	//	break;
-	case DZyou://8
-		return pDZ->getDzid() == (DZyin);
-		break;
-	//case DZxu://9
-	//	//return pTG->getTgid() == (TianGan::TGbing);
-	//	break;
-	//case DZhai://10
-	//	//return pTG->getTgid() == (TianGan::TGyi);
-	//	break;
-	case DZzi://×ÓËÈ³ó¸ýÖÐ
-		return pDZ->getDzid() == (DZsi);
-		break;
-	//case DZchou:
-	//	//return pTG->getTgid() == (TianGan::TGgeng);
-	//	break;
-	default:
-		return false;
-		break;
-	}
+    switch (pMonth->getDzid())
+    {
+        //case DZyin://æ­£ä¸äºŒç”³åºš
+        //	return pTG->getTgid() == TianGan::TGding;
+        //	break;
+        case DZmao://2
+            return pDZ->getDzid() == (DZshen);
+            break;
+            //case DZchen://3
+            //	//return pTG->getTgid() == TianGan::TGren;
+            //	break;
+            //case DZsi://4
+            //	//return pTG->getTgid() ==(TianGan::TGxin);
+            //	break;
+        case DZwu://5
+            return pDZ->getDzid() == (DZhai);
+            break;
+        case DZwei://6
+            //return pTG->getTgid() == (TianGan::TGjia);
+            break;
+            //case DZshen://7
+            //	//return pTG->getTgid() == (TianGan::TGgui);
+            //	break;
+        case DZyou://8
+            return pDZ->getDzid() == (DZyin);
+            break;
+            //case DZxu://9
+            //	//return pTG->getTgid() == (TianGan::TGbing);
+            //	break;
+            //case DZhai://10
+            //	//return pTG->getTgid() == (TianGan::TGyi);
+            //	break;
+        case DZzi://å­å·³ä¸‘åºšä¸­
+            return pDZ->getDzid() == (DZsi);
+            break;
+            //case DZchou:
+            //	//return pTG->getTgid() == (TianGan::TGgeng);
+            //	break;
+        default:
+            return false;
+            break;
+    }
 
-	return false;
+    return false;
 }
 
 bool ShenSha::isYueDe(std::shared_ptr<DiZhi>  pMonth, int tgid)

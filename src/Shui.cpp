@@ -11,5 +11,5 @@ Shui::~Shui(void)
 
 string Shui::getFeature()
 {
-	return "ˮ";
+	return "水";
 }

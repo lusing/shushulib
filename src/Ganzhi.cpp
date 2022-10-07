@@ -17,7 +17,7 @@ bool GanZhi::ke(std::shared_ptr<GanZhi> pdz)
 {
 	if (Xing::ke(this->getXing(),pdz->getXing())){
 		cout<<this->getName()<<Xing::transFeature(this->getXing());
-		cout<<"��"<<pdz->getName()<<Xing::transFeature(pdz->getXing());
+		cout<<" 克 "<<pdz->getName()<<Xing::transFeature(pdz->getXing());
 		cout<<endl;
 		return true;
 	}
@@ -28,7 +28,7 @@ bool GanZhi::sheng(std::shared_ptr<GanZhi> pGZ)
 {
 	if(Xing::sheng(getXing(),pGZ->getXing())){
 		cout<<this->getName()<<Xing::transFeature(this->getXing());
-		cout<<"��"<<pGZ->getName()<<Xing::transFeature(pGZ->getXing());
+		cout<<" 生 "<<pGZ->getName()<<Xing::transFeature(pGZ->getXing());
 		cout<<endl;
 		return true;
 	}
