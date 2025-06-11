@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.10)
 # set the project name
 project(shushu)
 
+add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
+add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
+
 # add the executable
 add_executable(shushu
         src/SixRen.cpp src/LiuRen.cpp src/Xing.cpp src/Tiangan.cpp src/DiZhi.cpp src/month.cpp src/Gan_Zhi.cpp src/Ganzhi.cpp
