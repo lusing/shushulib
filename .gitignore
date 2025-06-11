@@ -4,3 +4,8 @@ build/
 out/
 x64/
 cmake-build-debug/
+*.sln
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+
